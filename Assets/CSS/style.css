@@ -1,0 +1,28 @@
+body,
+html {
+    height: 100%;
+}
+
+body {
+    /*Image*/
+    background-image: url("/Assets/Images/backgroundMerica.jpg");
+    /*Image height*/
+    height: 90%;
+    /* Center and scale the IMG */
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+li {
+    list-style-type: none;
+}
+
+.jumbotron {
+    margin: 10% 0%;
+    width: 100%
+}
