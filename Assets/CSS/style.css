@@ -7,11 +7,11 @@ body {
     /*Image*/
     background-image: url("/Assets/Images/backgroundMerica.jpg");
     /*Image height*/
-    height: 90%;
+    height: 95%;
     /* Center and scale the IMG */
     background-position: center;
     background-size: cover;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
 }
 
 a {
