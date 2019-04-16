@@ -5,7 +5,7 @@ html {
 
 body {
     /*Image*/
-    background-image: url("/Assets/Images/backgroundMerica.jpg");
+    background-image: url("../Images/backgroundMerica.jpg");
     /*Image height*/
     height: 95%;
     /* Center and scale the IMG */
