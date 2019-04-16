@@ -14,77 +14,26 @@
     <div class="div container ">
         <div class="jumbotron d-flex text-center">
             <div class="title row">
-                <h1>This is the title row</h1>
-                <h4>You have _ much time left</h4>
-                <h4 id="Question"></h4>
-                <ul>
-                    <li id="" class="options"><a href="#"><span>1</span></a></li>
-                    <li id="" class="options"><a href="#"><span>2</span></a></li>
-                    <li id="" class="options"><a href="#"><span>3</span></a></li>
-                    <li id="" class="options"><a href="#"><span>4</span></a></li>
-                </ul>
-
-
+                <h1>Trivia Game</h1>
+                <button id="reset" type="Submit" class="btn btn-light btn-lg">Try Again?</button>
+                <button id="start" type="Submit" class="btn btn-light btn-lg">Begin Game</button>
+                <br><br>
+                <h4 id="time-left">Time Left</h4>
                 <form>
-                    <p>Question 1...</p>
-                    <fieldset id="group1">
-                        <button type="button" class="btn btn-light btn-lg btn-block">Answer 1</button>
-                        <button type="button" class="btn btn-light btn-lg btn-block">Answer 2</button>
-                        <button type="button" class="btn btn-light btn-lg btn-block">Answer 3</button>
-                        <button type="button" class="btn btn-light btn-lg btn-block">Answer 4</button>
+                    <p id="question">Question 1...</p>
+                    <fieldset id="choices-div">
+                        <button id="option1" type="Submit" class="btn btn-light btn-lg btn-block"></button>
+                        <button id="option2"  type="Submit" class="btn btn-light btn-lg btn-block"></button>
+                        <button id="option3"  type="Submit" class="btn btn-light btn-lg btn-block"></button>
+                        <button id="option4"  type="Submit" class="btn btn-light btn-lg btn-block"></button>
                         <!-- 
                             <input type="radio" id="q1a1" name="q1" value="Answer 1"><label for="dewey">Answer 1</label>
                             <input type="radio" id="q1a2" name="q1" value="Answer 2"><label for="dewey">Answer 2</label>
                             <input type="radio" id="q1a2" name="q1" value="Answer 2"><label for="dewey">Answer 2</label>
                         -->
-                    </fieldset>
-                    <p>Question 2...</p>
-                    <fieldset id="group2">
-                        <button type="button" class="btn btn-light btn-lg btn-block">Answer 1</button>
-                        <button type="button" class="btn btn-light btn-lg btn-block">Answer 2</button>
-                        <button type="button" class="btn btn-light btn-lg btn-block">Answer 3</button>
-                        <button type="button" class="btn btn-light btn-lg btn-block">Answer 4</button>
-                        <!--
-                            <input type="radio" id="q2a1" name="q2" value="Answer 1"><label for="dewey">Answer 1</label>
-                            <input type="radio" id="q2a2" name="q2" value="Answer 2"><label for="dewey">Answer 2</label>
-                        -->
-                    </fieldset>
-                    <p>Question 3...</p>
-                    <fieldset id="group3">
-                        <button type="button" class="btn btn-light btn-lg btn-block">Answer 1</button>
-                        <button type="button" class="btn btn-light btn-lg btn-block">Answer 2</button>
-                        <button type="button" class="btn btn-light btn-lg btn-block">Answer 3</button>
-                        <button type="button" class="btn btn-light btn-lg btn-block">Answer 4</button>
-                    </fieldset>
-                    <p>Question 4...</p>
-                    <fieldset id="group4">
-                        <button type="button" class="btn btn-light btn-lg btn-block">Answer 1</button>
-                        <button type="button" class="btn btn-light btn-lg btn-block">Answer 2</button>
-                        <button type="button" class="btn btn-light btn-lg btn-block">Answer 3</button>
-                        <button type="button" class="btn btn-light btn-lg btn-block">Answer 4</button>
-                    </fieldset>
-                    <p>Question 5...</p>
-                    <fieldset id="group5">
-                        <button type="button" class="btn btn-light btn-lg btn-block">Answer 1</button>
-                        <button type="button" class="btn btn-light btn-lg btn-block">Answer 2</button>
-                        <button type="button" class="btn btn-light btn-lg btn-block">Answer 3</button>
-                        <button type="button" class="btn btn-light btn-lg btn-block">Answer 4</button>
-                    </fieldset>
-                    <p>Question 6...</p>
-                    <fieldset id="group6">
-                        <button type="button" class="btn btn-light btn-lg btn-block">Answer 1</button>
-                        <button type="button" class="btn btn-light btn-lg btn-block">Answer 2</button>
-                        <button type="button" class="btn btn-light btn-lg btn-block">Answer 3</button>
-                        <button type="button" class="btn btn-light btn-lg btn-block">Answer 4</button>
-                    </fieldset>
-                    <p>Question 7...</p>
-                    <fieldset id="group7">
-                        <button type="button" class="btn btn-light btn-lg btn-block">Answer 1</button>
-                        <button type="button" class="btn btn-light btn-lg btn-block">Answer 2</button>
-                        <button type="button" class="btn btn-light btn-lg btn-block">Answer 3</button>
-                        <button type="button" class="btn btn-light btn-lg btn-block">Answer 4</button>
-                    </fieldset>
                 </form>
+                
+
 
 
                 <button onclick="checkIfTrue()">click me</button>
@@ -93,164 +42,10 @@
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
                 <script src="./Assets/JS/main.js"></script>
                 <script>
-                    $(document).ready(function() {
-
-                    });
-
-                    function checkIfTrue() {
-                        var correctCounter = 0;
-                        var q1check = document.getElementById('q1a1');
-                        console.log(q1check);
-                        if (q1check.checked == '1') {
-                            console.log("Answer 1: true");
-                            correctCounter++;
-                        } else {
-                            console.log('Answer 1: false');
-                        }
-
-                        var q2check = document.getElementById('q2a2');
-                        console.log(q2check);
-                        if (q2check.checked == '1') {
-                            console.log("Answer 2: true");
-                            correctCounter++;
-                        } else {
-                            console.log('Answer 2: false');
-                        }
-
-                        var results = document.getElementById('results');
-                        results.innerText = "You scored: " + correctCounter + "/2";
-                    }
+                   
                 </script>
                 <!--
-                    Category 1: Movies
-                        Q: Which movie did not win an Acadamy Award?
-                        -Forrest Gump
-                        -Good Will Hunting
-                        -The Green Mile
-                        -Pulp Fiction
-
-                        Q: Which movie does Will Farrel not appear in?
-                        -Anchorman
-                        -Old School
-                        -Lego Movie
-                        -Anchorman 3
-
-                        Q: Which actors were in True Grit?
-                        -Jeff Daniels
-                        -John Wayne
-                        -Matt Damon
-                        -Sam Elliot
-
-                        Q: How many times has Robert DeNiro been nominated for an Oscar?
-                        -1
-                        -7*
-                        -3
-                        -5
-
-                        Q: How many movies has Samuel L. Jackson appeared in?
-                        -126*
-                        -176
-                        -156
-                        -113
-
-                        Q: What is Donald Trump's IQ?
-                        -1
-                        -2
-                        -3
-                        -5
-
-                    Category: Sports
-                        Q: Who scored the most points in NBA history?
-                        -Kareem Abdul Jabar
-                        -Oscar Robinson
-                        -Michael Jordan
-                        -Shaquille O'Neal
-
-                        Q: How many World Series have the Kansas City Royals participated in?
-                        -7
-                        -2
-                        -5
-                        -4
-
-                        Q: Who has won more Championships?
-                        -Tom Brady
-                        -Yogi Berra
-                        -Michael Jordan
-                        -Wayne Gretzke
-
-                        Q: Which country has won the most world cups?
-                        -Brazil
-                        -Germany
-                        -Spain
-                        -France
-
-                        Q: Need Another Sports Question
-                        -Answer
-                        -Answer
-                        -Answer
-                        -Answer
-
-                    Category: Random
-                        Q: How long does it take for the Moon to orbit the Earth?
-                        -27 Days*
-                        -9 Months
-                        -6 Months
-                        -14 Days
-
-                        Q: How many elements are on the Periodic Table of Elements?
-                        -118*
-                        -64
-                        -127
-                        -32
-
-                        Q: What is the average age of a community college student?
-                        -29*
-                        -19
-                        -22
-                        -25
-
-                        Q: How many countries are there in the world?
-                        -212
-                        -195
-                        -334
-                        -7
-
-                        Q: How many languages are spoken in the world?
-                        -2562
-                        -&gt;6500*
-                        -&lt;2000
-                        -&lt;1000
-
-                        Q: What is the most popular dog breed in America?
-                        -Labradore 
-                        -German Sheppard
-                        -Golden Retriever
-                        -French Bulldogs
-
-                        Q: Which beer has the highest sales?
-                        -Yanjing
-                        -Coors Light
-                        -Corona
-                        -Tsingtao*
-
-                        Q: Which is the most popular Surname?
-                        -Jones
-                        -Wang*
-                        -Johnson
-                        -Nguyen
-
-                        Q: Who is Satoshi Nakamoto?
-                        -A famous monk in Japan
-                        -The purple Teenage Mutant Ninja Turtle
-                        -The founder of cryptocurrency
-                        -The first samouri
-
-                        Q: What is the highest selling game console of all time?
-                        -PlayStation
-                        -Nintendo 64
-                        -XBox One
-                        -Playstation 2*
-                    -->
+                    
 </body>
 
 </html>
