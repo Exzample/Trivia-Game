@@ -9,43 +9,42 @@
     <link rel="stylesheet" href="./Assets/CSS/style.css">
     <title>Trivia Game</title>
 </head>
-
 <body>
     <div class="div container ">
         <div class="jumbotron d-flex text-center">
             <div class="title row">
                 <h1>Trivia Game</h1>
-                <button id="reset" type="Submit" class="btn btn-light btn-lg">Try Again?</button>
-                <button id="start" type="Submit" class="btn btn-light btn-lg">Begin Game</button>
+                <button id="reset" type="Select" class="btn btn-light btn-lg">Try Again?</button>
+                <button id="start" type="Select" class="btn btn-light btn-lg">Begin Game</button>
                 <br><br>
-                <h4 id="time-left">Time Left</h4>
-                <form>
-                    <p id="question">Question 1...</p>
-                    <fieldset id="choices-div">
-                        <button id="option1" type="Submit" class="btn btn-light btn-lg btn-block"></button>
-                        <button id="option2"  type="Submit" class="btn btn-light btn-lg btn-block"></button>
-                        <button id="option3"  type="Submit" class="btn btn-light btn-lg btn-block"></button>
-                        <button id="option4"  type="Submit" class="btn btn-light btn-lg btn-block"></button>
-                        <!-- 
-                            <input type="radio" id="q1a1" name="q1" value="Answer 1"><label for="dewey">Answer 1</label>
-                            <input type="radio" id="q1a2" name="q1" value="Answer 2"><label for="dewey">Answer 2</label>
-                            <input type="radio" id="q1a2" name="q1" value="Answer 2"><label for="dewey">Answer 2</label>
-                        -->
-                </form>
+                <div id="gameArea">
+                    <h4 id="time-left">Time Left</h4>
+                    <form>
+                        <p id="question"></p>
+                        <fieldset id="choices-div">
+                            <button id="option1" type="Submit" class="btn btn-light btn-lg btn-block option"></button>
+                            <button id="option2" type="Submit" class="btn btn-light btn-lg btn-block option"></button>
+                            <button id="option3" type="Submit" class="btn btn-light btn-lg btn-block option"></button>
+                            <button id="option4" type="Submit" class="btn btn-light btn-lg btn-block option"></button>
+                            <!-- 
+                                <input type="radio" id="q1a1" name="q1" value="Answer 1"><label for="dewey">Answer 1</label>
+                                <input type="radio" id="q1a2" name="q1" value="Answer 2"><label for="dewey">Answer 2</label>
+                                <input type="radio" id="q1a2" name="q1" value="Answer 2"><label for="dewey">Answer 2</label>
+                            -->
+                    </form>
+                </div>    <!-- <button onclick="checkIfTrue()">click me</button> -->
+                <p id="results"></p>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+                <script src="./Assets/JS/main.js"></script>
+            </body>
+            </html>
+
                 
 
 
 
-                <button onclick="checkIfTrue()">click me</button>
-                <p id="results"></p>
 
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-                <script src="./Assets/JS/main.js"></script>
-                <script>
-                   
-                </script>
-                <!--
+            
+               
+                
                     
-</body>
-
-</html>

@@ -1,28 +1,32 @@
 body,
 html {
-    height: 100%;
+  height: 100%;
 }
 
 body {
-    /*Image*/
-    background-image: url("../Images/backgroundMerica.jpg");
-    /*Image height*/
-    height: 95%;
-    /* Center and scale the IMG */
-    background-position: center;
-    background-size: cover;
-    background-repeat: repeat;
+  /*Image*/
+  background-image: url("../Images/backgroundMerica.jpg");
+  /*Image height*/
+  height: 95%;
+  /* Center and scale the IMG */
+  background-position: center;
+  background-size: cover;
+  background-repeat: repeat;
 }
 
 a {
-    text-decoration: none !important;
+  text-decoration: none !important;
 }
 
 li {
-    list-style-type: none;
+  list-style-type: none;
 }
 
 .jumbotron {
-    margin: 10% 0%;
-    width: 100%
+  margin: 10% 0%;
+  width: 100%;
+}
+
+#gameArea {
+  display: none;
 }
