@@ -14,25 +14,37 @@
         <div class="jumbotron d-flex text-center">
             <div class="title row">
                 <h1>Trivia Game</h1>
-                <button id="reset" type="Select" class="btn btn-light btn-lg">Try Again?</button>
-                <button id="start" type="Select" class="btn btn-light btn-lg">Begin Game</button>
+                <button id="start" type="Select" class="btn btn-light btn-lg" onClick="playGame('id')">Begin Game</button>
+                <button id="reset" type="Select" class="btn btn-light btn-lg" style="display:none;">Try Again?</button>
                 <br><br>
-                <div id="gameArea">
-                    <h4 id="time-left">Time Left</h4>
+                <div id="quiz">
+                    <h4 id="clock" style="display : none;"></h4>
+                    <h4 id="counter" style="display : none;"></h4>
+                    <div id="questionImg" style="display : hide;"></div>
                     <form>
                         <p id="question"></p>
                         <fieldset id="choices-div">
-                            <button id="option1" type="Submit" class="btn btn-light btn-lg btn-block option"></button>
-                            <button id="option2" type="Submit" class="btn btn-light btn-lg btn-block option"></button>
-                            <button id="option3" type="Submit" class="btn btn-light btn-lg btn-block option"></button>
-                            <button id="option4" type="Submit" class="btn btn-light btn-lg btn-block option"></button>
+                            <button id="choice1" type="Submit" class="btn btn-light btn-lg btn-block option" onClick="checkAnswer('choice1')"></button>
+                            <button id="choice2" type="Submit" class="btn btn-light btn-lg btn-block option" onClick="checkAnswer('choice2')"></button>
+                            <button id="choice3" type="Submit" class="btn btn-light btn-lg btn-block option" onClick="checkAnswer('choice3')"></button>
+                            <button id="choice4" type="Submit" class="btn btn-light btn-lg btn-block option" onClick="checkAnswer('choice4')"></button>
+                        </fieldset>
+                    </form>
+                </div>
+                <div class="score" style="display : none;">
+                    <img src="https://placeholder/200" alt="You did well!">
+                    <p id="percent"></p>
+                </div>
+                
+                
+                
+                
+                <!-- <button onclick="checkIfTrue()">click me</button> -->
                             <!-- 
                                 <input type="radio" id="q1a1" name="q1" value="Answer 1"><label for="dewey">Answer 1</label>
                                 <input type="radio" id="q1a2" name="q1" value="Answer 2"><label for="dewey">Answer 2</label>
                                 <input type="radio" id="q1a2" name="q1" value="Answer 2"><label for="dewey">Answer 2</label>
                             -->
-                    </form>
-                </div>    <!-- <button onclick="checkIfTrue()">click me</button> -->
                 <p id="results"></p>
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
                 <script src="./Assets/JS/main.js"></script>
