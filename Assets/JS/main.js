@@ -1,62 +1,210 @@
-
 console.log("https://youtu.be/49pYIMygIcU?t=438");
 
 let questions = [
   {
-  question: "Which movie did not win an AcadamyAward?",
-  src : "http://placeholder/200",
-  choice1 : "Forrest Gump",
-  choice2 : "Good Will Hunting",
-  choice3 : "The Green Mile",
-  choice4 : "Pulp Fiction",
-  correct : "choice3"
-},
-{
-  question : "Which movie does Will Farrel not appear in?",
-  src : "http://placeholder/200",
-  choice1 : "Anchorman",
-  choice2 : "Old School",
-  choice3 : "Lego Movie",
-  choice4 : "Anchorman 3",
-  correct : "choice4"
-},
-{
-  question : "Which actor was <strong><em>NOT</em></strong> in True Grit?",
-  src : "http://placeholder/200",
-  choice1 : "Jeff Daniels", 
-  choice2 : "John Wayne",
-  choice3 : "Matt Damon",
-  choice4 : "Sam Elliot",
-  correct : "choice4"
-},
-{
-  question : "How many times has Robert DeNiro been nominated for an Oscar?",
-  src : "http://placeholder/200",
-  choice1 : 1,
-  choice2 : 7,
-  choice3 : 3,
-  choice4 : 5,
-  correct : "choice2"
-},
-{
-  question : "How many movies has Samuel L.Jackson appeared in?",
-  src : "http://placeholder/200",
-  choice1 : 126,
-  choice2 : 176,
-  choice3 : 156,
-  choice4 : 113,
-  correct : "choice1"
-},
-{
-  question : "What is Donald Trump's IQ?",
-  src : "http://placeholder/200",
-  choice1 : "1",
-  choice2 : "2",
-  choice3 : "3",
-  choice4 : "5",
-  correct : "choice1"
-},
-]
+    question: "Which movie did not win an AcadamyAward?",
+    src: "http://placeholder/200",
+    choice1: "Forrest Gump",
+    choice2: "Good Will Hunting",
+    choice3: "The Green Mile",
+    choice4: "Pulp Fiction",
+    correct: "choice3"
+  },
+  {
+    question: "Which movie does Will Farrel not appear in?",
+    src: "http://placeholder/200",
+    choice1: "Anchorman",
+    choice2: "Old School",
+    choice3: "Lego Movie",
+    choice4: "Anchorman 3",
+    correct: "choice4"
+  },
+  {
+    question: "Which actor was <strong><em>NOT</em></strong> in True Grit?",
+    src: "http://placeholder/200",
+    choice1: "Jeff Daniels",
+    choice2: "John Wayne",
+    choice3: "Matt Damon",
+    choice4: "Sam Elliot",
+    correct: "choice4"
+  },
+  {
+    question: "How many times has Robert DeNiro been nominated for an Oscar?",
+    src: "http://placeholder/200",
+    choice1: 1,
+    choice2: 7,
+    choice3: 3,
+    choice4: 5,
+    correct: "choice2"
+  },
+  {
+    question: "How many movies has Samuel L.Jackson appeared in?",
+    src: "http://placeholder/200",
+    choice1: 126,
+    choice2: 176,
+    choice3: 156,
+    choice4: 113,
+    correct: "choice1"
+  },
+  {
+    question: "What is Donald Trump's IQ?",
+    src: "http://placeholder/200",
+    choice1: "1",
+    choice2: "2",
+    choice3: "3",
+    choice4: "5",
+    correct: "choice1"
+  },
+  {
+    question: "Who scored the most points in NBA history?",
+    src: "http://placeholder/200",
+    choice1: "Shaquille O'Neal",
+    choice2: "Michael Jordan",
+    choice3: "Kareem Abdul Jabar",
+    choice4: "Oscar Robinson",
+    correct: "choice1"
+  },
+  {
+    question:
+      "How many World Series have the Kansas City Royals participated in?",
+    src: "http://placeholder/200",
+    choice1: "7",
+    choice2: "2",
+    choice3: "5",
+    choice4: "4",
+    correct: "choice4"
+  },
+  {
+    question: "Who has won more Championships?",
+    src: "http://placeholder/200",
+    choice1: "Tom Brady",
+    choice2: "Yogi Berra",
+    choice3: "Michael Jordan",
+    choice4: "Wayne Gretzke",
+    correct: "choice2"
+  },
+  {
+    question: "Which country has won the most world cups?",
+    src: "http://placeholder/200",
+    choice1: "Brazil",
+    choice2: "Germany",
+    choice3: "Spain",
+    choice4: "France",
+    correct: "choice1"
+  },
+  {
+    question: "How long does it take for the Moon to orbit the Earth?",
+    src: "http://placeholder/200",
+    choice1: "6 Months",
+    choice2: "9 Months",
+    choice3: "27 Days",
+    choice4: "14 Days",
+    correct: "choice3"
+  },
+  {
+    question: "How many elements are on the Periodic Table of Elements?",
+    src: "http://placeholder/200",
+    choice1: "118",
+    choice2: "64",
+    choice3: "127",
+    choice4: "32",
+    correct: "choice1"
+  },
+  {
+    question: "What is the average age of a community college student?",
+    src: "http://placeholder/200",
+    choice1: "19",
+    choice2: "29",
+    choice3: "22",
+    choice4: "25",
+    correct: "choice2"
+  },
+  {
+    question: "How many countries are there in the world?",
+    src: "http://placeholder/200",
+    choice1: "212",
+    choice2: "195",
+    choice3: "334",
+    choice4: "7",
+    correct: "choice2"
+  },
+  {
+    question: "How many languages are spoken in the world?",
+    src: "http://placeholder/200",
+    choice1: "2562",
+    choice2: "-& lt; 1000",
+    choice3: "-& lt; 2000",
+    choice4: "-&gt; 6500",
+    correct: "choice4"
+  },
+  {
+    question: "What is the most popular dog breed in America?",
+    src: "http://placeholder/200",
+    choice1: "Labradore",
+    choice2: "German Sheppard",
+    choice3: "Golden Retriever",
+    choice4: "French Bulldogs",
+    correct: "choice1"
+  },
+  {
+    question: "Which beer has the highest sales?",
+    src: "http://placeholder/200",
+    choice1: "Yanjing",
+    choice2: "Coors Light",
+    choice3: "Corona",
+    choice4: "Tsingtao",
+    correct: "choice4"
+  },
+  {
+    question: "Which is the most popular Surname in the world?",
+    src: "http://placeholder/200",
+    choice1: "Jones",
+    choice2: "Wang",
+    choice3: "Johnson",
+    choice4: "Nguyen",
+    correct: "choice2"
+  },
+  {
+    question: "Who is Satoshi Nakamoto?",
+    src: "http://placeholder/200",
+    choice1: "A famous monk in Japan",
+    choice2: "The purple Teenage Mutant Ninja Turtle",
+    choice3: "The founder of cryptocurrency",
+    choice4: "The first samouri",
+    correct: "choice3"
+  },
+  {
+    question: "What is the highest selling game console of all time?",
+    src: "http://placeholder/200",
+    choice1: "PlayStation",
+    choice2: "Nintendo 64",
+    choice3: "XBox One",
+    choice4: "Playstation 2",
+    correct: "choice4"
+  }
+];
+//   const answerArr = [
+//     "The Green Mile",
+//     "Anchorman 3",
+//     "Sam Elliot",
+//     "7",
+//     "126",
+//     "1",
+//     "Kareem Abdul Jabar",
+//     "4",
+//     "Yogi Berra",
+//     "Brazil",
+//     "27 Days",
+//     "118",
+//     "29",
+//     "195",
+//     "-&gt; 6500",
+//     "Labradore",
+//     "Tsingtao",
+//     "Wang",
+//     "The founder of cryptocurrency",
+//     "Playstation 2"
+//   ];
 // Making Variables for all elements that need to be munipulated //
 const start = $("#start");
 const reset = $("#reset");
@@ -71,12 +219,12 @@ const choice4 = $("#choice4");
 const userInput = [];
 
 // End game when the for loop gets to the last question arr //
-let questionIndex = questions.length -1;
+let questionIndex = questions.length - 1;
 // Create question iterator //
 let runningQuestionIndex;
 
 // Function to render questions in the buttons //
-function renderQuestion(){
+function renderQuestion() {
   for (let i = 0; i < questions.length; i++) {
     let currentQuestion = questions[questionIndex];
     $("#question").text(currentQuestion.question);
@@ -96,7 +244,6 @@ function renderQuestion(){
 //     .attr("id='questionIndex'")
 // }
 
-
 // for (let i = 0; i < questions.length; i++){
 //   console.log(questions[i].question);
 //   console.log(questions[i].src);
@@ -106,41 +253,17 @@ function renderQuestion(){
 //   console.log(questions[i].correct);
 // }
 
-
-
-
-
-
-
-
-
 // $("#reset").hide();
 // $("#start").on("click", () => {
 //   $("#gameArea").show();
 // });
 
 // $(document).ready(function() {
-//   const questionsArr = [
-//     "Which movie did not win an AcadamyAward?",
-//     "Which movie does Will Farrel not appear in?",
-//     "Which actor was NOT in True Grit?",
-//     "How many times has Robert DeNiro been nominated for an Oscar?",
-//     "How many movies has Samuel L.Jackson appeared in?",
-//     "What is Donald Trump's IQ?",
-//     "Who scored the most points in NBA history ?",
-//     "How many World Series have the Kansas City Royals participated in?",
-//     "Who has won more Championships?",
-//     "Which country has won the most world cups ?",
-//     "How long does it take for the Moon to orbit the Earth?",
-//     "How many elements are on the Periodic Table of Elements?",
-//     "What is the average age of a community college student?",
-//     "How many countries are there in the world?",
-//     "How many languages are spoken in the world?",
-//     "What is the most popular dog breed in America?",
-//     "Which beer has the highest sales?",
-//     "Which is the most popular Surname in the world?",
-//     "Who is Satoshi Nakamoto?",
-//     "What is the highest selling game console of all time?"
+
+//     "",
+//     "",
+//     "",
+//     ""
 //   ];
 //   var question1 = questionsArr[0];
 
@@ -166,40 +289,13 @@ function renderQuestion(){
 //     ["212", "195", "334", "7"],
 //     ["2562", "-&gt; 6500", "-& lt; 2000", "-& lt; 1000"],
 //     ["Labradore", "German Sheppard", "Golden Retriever", "French Bulldogs"],
-//     ["Yanjing", "Coors Light", "Corona", "Tsingtao *"],
-//     ["Jones", "Wang", "Johnson", "Nguyen"],
-//     [
-//       "A famous monk in Japan",
-//       "The purple Teenage Mutant Ninja Turtle",
-//       "The founder of cryptocurrency",
-//       "The first samouri"
-//     ],
-//     ["PlayStation", "Nintendo 64", "XBox One", "Playstation 2"]
+//
+//
+
+//
 //   ];
 //   console.log(optionsArr[0][0]); //Prints Forest Gump
 
-//   const answerArr = [
-//     "The Green Mile",
-//     "Anchorman 3",
-//     "Sam Elliot",
-//     "7",
-//     "126",
-//     "1",
-//     "Kareem Abdul Jabar",
-//     "4",
-//     "Yogi Berra",
-//     "Brazil",
-//     "27 Days",
-//     "118",
-//     "29",
-//     "195",
-//     "-&gt; 6500",
-//     "Labradore",
-//     "Tsingtao",
-//     "Wang",
-//     "The founder of cryptocurrency",
-//     "Playstation 2"
-//   ];
 //   console.log(answerArr[0]);
 
 //   // default variables //
@@ -209,7 +305,6 @@ function renderQuestion(){
 //   var questionCount = 0;
 
 //   // jQuery Variables //
-
 
 //   var count;
 
@@ -243,9 +338,9 @@ function renderQuestion(){
 //         .trim()
 //     );
 
-    // if ((e = answerArr[0])) {
-    //   choices++;
-    // }
+// if ((e = answerArr[0])) {
+//   choices++;
+// }
 //   });
 
 //   // console.log(triviaObj);
