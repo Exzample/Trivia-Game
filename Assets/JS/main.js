@@ -3,7 +3,7 @@ console.log("https://youtu.be/49pYIMygIcU?t=438");
 let questions = [
   {
     question: "Which movie did not win an AcadamyAward?",
-    src: "http://placeholder/200",
+    src: "./Assets/Images/TheGreenMile.jpg",
     choice1: "Forrest Gump",
     choice2: "Good Will Hunting",
     choice3: "The Green Mile",
@@ -12,7 +12,7 @@ let questions = [
   },
   {
     question: "Which movie does Will Farrel not appear in?",
-    src: "http://placeholder/200",
+    src: "./Assets/Images/AnchorMan3.jpg",
     choice1: "Anchorman",
     choice2: "Old School",
     choice3: "Lego Movie",
@@ -21,7 +21,7 @@ let questions = [
   },
   {
     question: "Which actor was <strong><em>NOT</em></strong> in True Grit?",
-    src: "http://placeholder/200",
+    src: "./Assets/Images/SamElliot.jpg",
     choice1: "Jeff Daniels",
     choice2: "John Wayne",
     choice3: "Matt Damon",
@@ -30,25 +30,25 @@ let questions = [
   },
   {
     question: "How many times has Robert DeNiro been nominated for an Oscar?",
-    src: "http://placeholder/200",
-    choice1: 1,
-    choice2: 7,
-    choice3: 3,
-    choice4: 5,
+    src: "./Assets/Images/RobertDeNiro.jpg",
+    choice1: "1",
+    choice2: "7",
+    choice3: "3",
+    choice4: "5",
     correct: "choice2"
   },
   {
     question: "How many movies has Samuel L.Jackson appeared in?",
-    src: "http://placeholder/200",
-    choice1: 126,
-    choice2: 176,
-    choice3: 156,
-    choice4: 113,
+    src: "./Assets/Images/MaceWindus.jpg",
+    choice1: "126",
+    choice2: "176",
+    choice3: "156",
+    choice4: "113",
     correct: "choice1"
   },
   {
     question: "What is Donald Trump's IQ?",
-    src: "http://placeholder/200",
+    src: "./Assets/Images/Trump.png",
     choice1: "1",
     choice2: "2",
     choice3: "3",
@@ -57,7 +57,7 @@ let questions = [
   },
   {
     question: "Who scored the most points in NBA history?",
-    src: "http://placeholder/200",
+    src: "./Assets/Images/Kareem.jpeg",
     choice1: "Shaquille O'Neal",
     choice2: "Michael Jordan",
     choice3: "Kareem Abdul Jabar",
@@ -67,7 +67,7 @@ let questions = [
   {
     question:
       "How many World Series have the Kansas City Royals participated in?",
-    src: "http://placeholder/200",
+    src: "./Assets/Images/Royals.jpg",
     choice1: "7",
     choice2: "2",
     choice3: "5",
@@ -76,7 +76,7 @@ let questions = [
   },
   {
     question: "Who has won more Championships?",
-    src: "http://placeholder/200",
+    src: "./Assets/Images/Yogi.jpg",
     choice1: "Tom Brady",
     choice2: "Yogi Berra",
     choice3: "Michael Jordan",
@@ -85,7 +85,7 @@ let questions = [
   },
   {
     question: "Which country has won the most world cups?",
-    src: "http://placeholder/200",
+    src: "./Assets/Images/Brazil.jpg",
     choice1: "Brazil",
     choice2: "Germany",
     choice3: "Spain",
@@ -94,7 +94,7 @@ let questions = [
   },
   {
     question: "How long does it take for the Moon to orbit the Earth?",
-    src: "http://placeholder/200",
+    src: "./Assets/Images/Moon.jpg",
     choice1: "6 Months",
     choice2: "9 Months",
     choice3: "27 Days",
@@ -103,7 +103,7 @@ let questions = [
   },
   {
     question: "How many elements are on the Periodic Table of Elements?",
-    src: "http://placeholder/200",
+    src: "./Assets/Images/PeriodicTable.jpg",
     choice1: "118",
     choice2: "64",
     choice3: "127",
@@ -112,7 +112,7 @@ let questions = [
   },
   {
     question: "What is the average age of a community college student?",
-    src: "http://placeholder/200",
+    src: "./Assets/Images/CommunityCollege.jpg",
     choice1: "19",
     choice2: "29",
     choice3: "22",
@@ -121,7 +121,7 @@ let questions = [
   },
   {
     question: "How many countries are there in the world?",
-    src: "http://placeholder/200",
+    src: "./Assets/Images/WorldMap.png",
     choice1: "212",
     choice2: "195",
     choice3: "334",
@@ -130,7 +130,7 @@ let questions = [
   },
   {
     question: "How many languages are spoken in the world?",
-    src: "http://placeholder/200",
+    src: "./Assets/Images/Languages.png",
     choice1: "2562",
     choice2: "-& lt; 1000",
     choice3: "-& lt; 2000",
@@ -139,7 +139,7 @@ let questions = [
   },
   {
     question: "What is the most popular dog breed in America?",
-    src: "http://placeholder/200",
+    src: "./Assets/Images/Lab.jpg",
     choice1: "Labradore",
     choice2: "German Sheppard",
     choice3: "Golden Retriever",
@@ -148,7 +148,7 @@ let questions = [
   },
   {
     question: "Which beer has the highest sales?",
-    src: "http://placeholder/200",
+    src: "./Assets/Images/Beer.jpg",
     choice1: "Yanjing",
     choice2: "Coors Light",
     choice3: "Corona",
@@ -157,7 +157,7 @@ let questions = [
   },
   {
     question: "Which is the most popular Surname in the world?",
-    src: "http://placeholder/200",
+    src: "./Assets/Images/wang.png",
     choice1: "Jones",
     choice2: "Wang",
     choice3: "Johnson",
@@ -166,16 +166,16 @@ let questions = [
   },
   {
     question: "Who is Satoshi Nakamoto?",
-    src: "http://placeholder/200",
+    src: "./Assets/Images/Satoshi.jpeg",
     choice1: "A famous monk in Japan",
     choice2: "The purple Teenage Mutant Ninja Turtle",
-    choice3: "The founder of cryptocurrency",
+    choice3: "The team of developers from India that created Bitcoin",
     choice4: "The first samouri",
     correct: "choice3"
   },
   {
     question: "What is the highest selling game console of all time?",
-    src: "http://placeholder/200",
+    src: "./Assets/Images/PlayStation2.jpg",
     choice1: "PlayStation",
     choice2: "Nintendo 64",
     choice3: "XBox One",
@@ -183,28 +183,7 @@ let questions = [
     correct: "choice4"
   }
 ];
-//   const answerArr = [
-//     "The Green Mile",
-//     "Anchorman 3",
-//     "Sam Elliot",
-//     "7",
-//     "126",
-//     "1",
-//     "Kareem Abdul Jabar",
-//     "4",
-//     "Yogi Berra",
-//     "Brazil",
-//     "27 Days",
-//     "118",
-//     "29",
-//     "195",
-//     "-&gt; 6500",
-//     "Labradore",
-//     "Tsingtao",
-//     "Wang",
-//     "The founder of cryptocurrency",
-//     "Playstation 2"
-//   ];
+
 // Making Variables for all elements that need to be munipulated //
 const start = $("#start");
 const reset = $("#reset");
@@ -267,28 +246,6 @@ function renderQuestion() {
 //   ];
 //   var question1 = questionsArr[0];
 
-//   const optionsArr = [
-//     ["Forrest Gump", "Good Will Hunting", "The Green Mile", "Pulp Fiction"],
-//     ["Anchorman", "Old School", "Lego Movie", "Anchorman 3"],
-//     ["Jeff Daniels", "John Wayne", "Matt Damon", "Sam Elliot"],
-//     ["1", "7", "3", "5"],
-//     ["126", "176", "156", "113"],
-//     ["1", "2", "3", "5"],
-//     [
-//       "Kareem Abdul Jabar",
-//       "Oscar Robinson",
-//       "Michael Jordan",
-//       "Shaquille O'Neal"
-//     ],
-//     ["7", "2", "5", "4"],
-//     ["Tom Brady", "Yogi Berra", "Michael Jordan", "Wayne Gretzke"],
-//     ["Brazil", "Germany", "Spain", "France"],
-//     ["27 Days", "9 Months", "6 Months", "14 Days"],
-//     ["118", "64", "127", "32"],
-//     ["29", "19", "22", "25"],
-//     ["212", "195", "334", "7"],
-//     ["2562", "-&gt; 6500", "-& lt; 2000", "-& lt; 1000"],
-//     ["Labradore", "German Sheppard", "Golden Retriever", "French Bulldogs"],
 //
 //
 
