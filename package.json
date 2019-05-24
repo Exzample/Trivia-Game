@@ -1,0 +1,23 @@
+{
+  "name": "trivia-game",
+  "version": "1.0.0",
+  "description": "Trivia Game for Class",
+  "main": "index.js",
+  "dependencies": {
+    "eslint": "^5.16.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Exzample/Trivia-Game.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Exzample/Trivia-Game/issues"
+  },
+  "homepage": "https://github.com/Exzample/Trivia-Game#readme"
+}

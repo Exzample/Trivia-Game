@@ -14,16 +14,16 @@
         <div class="jumbotron d-flex text-center">
             <div class="title row">
                 <h1>Trivia Game</h1>
-                <button id="start" type="Select" class="btn btn-light btn-lg" onClick="playGame('id')">Begin Game</button>
-                <button id="reset" type="Select" class="btn btn-light btn-lg" style="display:none;">Try Again?</button>
+                <button id="start" type="Select" class="btn btn-light btn-lg" onClick="game.renderQuestion()">Begin Game</button>
+                <button id="reset" type="Select" class="btn btn-light btn-lg" style="display: show;">Try Again?</button>
                 <br><br>
                 <div id="quiz">
-                    <h4 id="clock" style="display : none;"></h4>
-                    <h4 id="counter" style="display : none;"></h4>
-                    <div id="questionImg" style="display : hide;"></div>
+                    <h4 id="clock" style="display : show;"></h4>
+                    <h4 id="counter" style="display : show;"></h4>
+                    <div id="questionImg" style="display : show;"></div>
                     <form>
                         <p id="question"></p>
-                        <fieldset id="choices-div">
+                        <fieldset id="choices-div" style="display: show;">
                             <button id="choice1" type="Submit" class="btn btn-light btn-lg btn-block option" onClick="checkAnswer('choice1')"></button>
                             <button id="choice2" type="Submit" class="btn btn-light btn-lg btn-block option" onClick="checkAnswer('choice2')"></button>
                             <button id="choice3" type="Submit" class="btn btn-light btn-lg btn-block option" onClick="checkAnswer('choice3')"></button>
@@ -31,8 +31,8 @@
                         </fieldset>
                     </form>
                 </div>
-                <div id="progress" style="display:show"></div>
-                <div class="score" style="display : none;">
+                <div id="progress" style="display: show;"></div>
+                <div class="score" style="display : show;">
                     <img src="https://placeholder/200" alt="You did well!">
                     <p id="percent"></p>
                 </div>
