@@ -248,6 +248,44 @@ let game = {
   },
   nextQuestion: () => {
     game.counter = countStartNumber;
+    $(counter).text(game.counter);
+    game.currentQuestion++;
+    game.renderQuestion();
+  },
+
+  timeUp: () => {
+    clearInterval(timer);
+    $(counter).text(game.counter);
+    $(question).text("Out of Time!");
+    $(question).append(
+      "<h3>The Correct Answer was: " + questions[this.currentQuestion].correct
+    );
+    $(questionImg).append(
+      "<img src='" + questions[this.currentQuestion].src + "' />"
+    );
+
+    if (game.currentQuestion === questions.length - 1) {
+      setTimeout(game.results, 3 * 1000);
+    } else {
+      setTimeout(game.nextQuestion, 3 * 1000);
+    }
+  },
+
+  results: () => {
+    clearInterval(timer);
+
+    score.text("Triva Game Results");
+    counter.text(game.counter);
+    question.text(
+      "The correct answer was :" + questionsArr[this.currentQuestion].correct
+    );
+    question.append(
+      "<img src'" + questionsArr[this.currentQuestion].image + "' />"
+    );
+  },
+
+  clicked: e => {
+    clearInterval(timer);
   }
 }; //! Closing Brace for Game() //
 
