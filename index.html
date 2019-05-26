@@ -23,10 +23,10 @@
                     <form>
                         <p id="question"></p>
                         <fieldset id="choices-div" style="display: show;">
-                            <button id="choice1" type="Submit" class="btn btn-light btn-lg btn-block option" onClick="checkAnswer('choice1')"></button>
-                            <button id="choice2" type="Submit" class="btn btn-light btn-lg btn-block option" onClick="checkAnswer('choice2')"></button>
-                            <button id="choice3" type="Submit" class="btn btn-light btn-lg btn-block option" onClick="checkAnswer('choice3')"></button>
-                            <button id="choice4" type="Submit" class="btn btn-light btn-lg btn-block option" onClick="checkAnswer('choice4')"></button>
+                            <button id="choice1" data-name='questionsArr.choice1' type="Submit" class="btn btn-light btn-lg btn-block option" onClick="game.loadQuestion()"></button>
+                            <button id="choice2" data-name='questionsArr.choice2' type="Submit" class="btn btn-light btn-lg btn-block option" onClick="game.loadQuestion()"></button>
+                            <button id="choice3" data-name='questionsArr.choice3' type="Submit" class="btn btn-light btn-lg btn-block option" onClick="game.loadQuestion()"></button>
+                            <button id="choice4" data-name='questionsArr.choice4' type="Submit" class="btn btn-light btn-lg btn-block option" onClick="game.loadQuestion()"></button>
                         </fieldset>
                     </form>
                 </div>

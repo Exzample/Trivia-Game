@@ -8,7 +8,7 @@ const questionsArr = [
     choice2: "Good Will Hunting",
     choice3: "The Green Mile",
     choice4: "Pulp Fiction",
-    correct: "choice3"
+    correct: "The Green Mile"
   },
   {
     question: "Which movie does Will Farrel not appear in?",
@@ -17,7 +17,7 @@ const questionsArr = [
     choice2: "Old School",
     choice3: "Lego Movie",
     choice4: "Anchorman 3",
-    correct: "choice4"
+    correct: "Anchorman 3"
   },
   {
     question: "Which actor was <strong><em>NOT</em></strong> in True Grit?",
@@ -26,7 +26,7 @@ const questionsArr = [
     choice2: "John Wayne",
     choice3: "Matt Damon",
     choice4: "Sam Elliot",
-    correct: "choice4"
+    correct: "Sam Elliot"
   },
   {
     question: "How many times has Robert DeNiro been nominated for an Oscar?",
@@ -35,7 +35,7 @@ const questionsArr = [
     choice2: "7",
     choice3: "3",
     choice4: "5",
-    correct: "choice2"
+    correct: "7"
   },
   {
     question: "How many movies has Samuel L.Jackson appeared in?",
@@ -44,7 +44,7 @@ const questionsArr = [
     choice2: "176",
     choice3: "156",
     choice4: "113",
-    correct: "choice1"
+    correct: "126"
   },
   {
     question: "What is Donald Trump's IQ?",
@@ -53,7 +53,7 @@ const questionsArr = [
     choice2: "2",
     choice3: "3",
     choice4: "5",
-    correct: "choice1"
+    correct: "1"
   },
   {
     question: "Who scored the most points in NBA history?",
@@ -62,7 +62,7 @@ const questionsArr = [
     choice2: "Michael Jordan",
     choice3: "Kareem Abdul Jabar",
     choice4: "Oscar Robinson",
-    correct: "choice1"
+    correct: "Shaquille O'Neal"
   },
   {
     question:
@@ -72,7 +72,7 @@ const questionsArr = [
     choice2: "2",
     choice3: "5",
     choice4: "4",
-    correct: "choice4"
+    correct: "4"
   },
   {
     question: "Who has won more Championships?",
@@ -81,7 +81,7 @@ const questionsArr = [
     choice2: "Yogi Berra",
     choice3: "Michael Jordan",
     choice4: "Wayne Gretzke",
-    correct: "choice2"
+    correct: "Yogi Berra"
   },
   {
     question: "Which country has won the most world cups?",
@@ -90,7 +90,7 @@ const questionsArr = [
     choice2: "Germany",
     choice3: "Spain",
     choice4: "France",
-    correct: "choice1"
+    correct: "Brazil"
   },
   {
     question: "How long does it take for the Moon to orbit the Earth?",
@@ -99,7 +99,7 @@ const questionsArr = [
     choice2: "9 Months",
     choice3: "27 Days",
     choice4: "14 Days",
-    correct: "choice3"
+    correct: "27 Days"
   },
   {
     question: "How many elements are on the Periodic Table of Elements?",
@@ -108,7 +108,7 @@ const questionsArr = [
     choice2: "64",
     choice3: "127",
     choice4: "32",
-    correct: "choice1"
+    correct: "118"
   },
   {
     question: "What is the average age of a community college student?",
@@ -117,7 +117,7 @@ const questionsArr = [
     choice2: "29",
     choice3: "22",
     choice4: "25",
-    correct: "choice2"
+    correct: "29"
   },
   {
     question: "How many countries are there in the world?",
@@ -126,7 +126,7 @@ const questionsArr = [
     choice2: "195",
     choice3: "334",
     choice4: "7",
-    correct: "choice2"
+    correct: "195"
   },
   {
     question: "How many languages are spoken in the world?",
@@ -135,7 +135,7 @@ const questionsArr = [
     choice2: "-& lt; 1000",
     choice3: "-& lt; 2000",
     choice4: "-&gt; 6500",
-    correct: "choice4"
+    correct: "-&gt; 6500"
   },
   {
     question: "What is the most popular dog breed in America?",
@@ -144,7 +144,7 @@ const questionsArr = [
     choice2: "German Sheppard",
     choice3: "Golden Retriever",
     choice4: "French Bulldogs",
-    correct: "choice1"
+    correct: "Labradore"
   },
   {
     question: "Which beer has the highest sales?",
@@ -153,7 +153,7 @@ const questionsArr = [
     choice2: "Coors Light",
     choice3: "Corona",
     choice4: "Tsingtao",
-    correct: "choice4"
+    correct: "Tsingtao"
   },
   {
     question: "Which is the most popular Surname in the world?",
@@ -162,7 +162,7 @@ const questionsArr = [
     choice2: "Wang",
     choice3: "Johnson",
     choice4: "Nguyen",
-    correct: "choice2"
+    correct: "Wang"
   },
   {
     question: "Who is Satoshi Nakamoto?",
@@ -171,7 +171,7 @@ const questionsArr = [
     choice2: "The purple Teenage Mutant Ninja Turtle",
     choice3: "The team of developers from India that created Bitcoin",
     choice4: "The first samouri",
-    correct: "choice3"
+    correct: "The team of developers from India that created Bitcoin"
   },
   {
     question: "What is the highest selling game console of all time?",
@@ -180,7 +180,7 @@ const questionsArr = [
     choice2: "Nintendo 64",
     choice3: "XBox One",
     choice4: "Playstation 2",
-    correct: "choice4"
+    correct: "Playstation 2"
   }
 ];
 
@@ -270,8 +270,9 @@ let game = {
     },
     // I got this from one of the solution files.  It saved me a ton of time//
     clicked: (e) => {
+      clearInterval(timer);
       if($(e.target).attr("data-name") === questionsArr[game.questionIndex].correct) {
-        this.answerCorrect();
+        this.answeredCorrect();
       }else {
         this.answeredWrong();
       }
@@ -294,10 +295,39 @@ let game = {
     },
 
     //What happens if the user pics the correct answer //
+    answeredCorrect: () => {
+      clearInterval(timer);
+      game.correct++;
 
-  }
+      question.text("Correct");
+      questionImg.append("<img height='300' width='500' src='" + questionsArr[game.questionIndex].src + "' />")
+
+      if (game.questionIndex === questionsArr.length -1) {
+        setTimeout(game.results, 3 * 1000);
+      } else {
+        setTimeout(game.nextQuestion, 3 * 1000);
+      }
+    },
+
+    reset: () => {
+      // Reset the Question Index
+      this.questionIndex = 0;
+      // Reset the counter to 0;
+      this.counter = countStartNumber;
+      // Reset the correct guesses to 0;
+      this.correct = 0;
+      // Reset the incorrect guesses to 0;
+      this.incorrect = 0;
+      // Load the first question -- reset questionIndex to 0 
+      this.loadQuestion();
+    }
+  };  // End of Game Function
       
-    
+$(document).on("click", "start", () => {
+  game.reset();
+});
+
+$(document).on("click", "")
 
 
 
