@@ -257,7 +257,7 @@ let game = {
     results: () => {
       clearInterval(timer);
       // Title of the score Div// 
-      score.text ("Here's How you did");
+      score.html("<h3>Here's How you did</h3>");
       //Display the counter //
       counter.text(game.counter);
       // Show user Correct Answers //
