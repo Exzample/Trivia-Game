@@ -186,7 +186,7 @@ const questionsArr = [
 
 // Making Variables for all elements that need to be munipulated //
 const start = $("#start");
-const reset = $("#reset");
+const reset = $("<button id='reset' type='Select' class='btn btn-light btn-lg'>"+ "Try Again?" + "</button>");
 const timeLeft = $("#clock");
 const questionImg = $("#questionImg");
 const question = $("#question");
@@ -196,6 +196,7 @@ const choice1 = $("#choice1");
 const choice2 = $("#choice2");
 const choice3 = $("#choice3");
 const choice4 = $("#choice4");
+const score = $(".score");
 const userInput = [];
 const countStartNumber = 5;
 
@@ -239,15 +240,35 @@ let game = {
     game.loadQuestion();
   },
 
-
-
     timeUp: () => {
       clearInterval(timer);
       counter.text(game.counter);
-      question.text("The Correct Answer Was : " + questionsArr[game.questionIndex].correct);
-      choices.prepend("<img src='" + questionsArr[game.questionIndex].src + "' />");
-      counter.prepend("Out of Time");
+      score.html("<h3>The Correct Answer Was : " + questionsArr[game.questionIndex].correct + "</h3>");
+      score.append("<img height='300' width='500' src='" + questionsArr[game.questionIndex].src + "' />");
+      counter.text("Out of Time");
+
+      if (game.questionIndex === questionsArr.length -1) {
+        setTimeout(game.results, 3 * 1000);
+      } else {
+        setTimeout(game.nextQuestion, 3 * 1000);
+      }
+    },
+
+    results: () => {
+      clearInterval(timer);
+      // Title of the score Div// 
+      score.text ("Here's How you did");
+      //Display the counter //
+      counter.text(game.counter);
+      // Show user Correct Answers //
+      score.append("<h3>Correct Answers: " + game.correct + "</h3>");
+      // Show user Incorrect Answers //
+      score.append("<h3>Incorrect Anwers: " + game.incorrect + "</h3>");
+      // Appending the reset button to the bottom of the score div so the user can try again//
+      score.append(reset);
+
     }
+
   }
       
     
