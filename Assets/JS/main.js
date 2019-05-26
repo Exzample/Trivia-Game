@@ -197,204 +197,60 @@ const choice2 = $("#choice2");
 const choice3 = $("#choice3");
 const choice4 = $("#choice4");
 const userInput = [];
-const countStartNumber = 30;
+const countStartNumber = 5;
 
-let timer;
 
 let game = {
-  questions: questionsArr,
-  currentQuestion: 0,
+
+  questions : questionsArr,
+  questionIndex: 0,
   counter: countStartNumber,
   correct: 0,
   incorrect: 0,
 
-  start: () => {
-    $(start).on("click", () => {
-      $(timeLeft).show();
-      $(counter).show();
-      $(choices).show();
-      game.renderQuestion;
-    });
-  },
-
+  // create a function to decrement the timer //
   countdown: () => {
     game.counter--;
-    $(counter).text(game.counter);
+    // display the countdown numbers in the counter div//
+    counter.text(game.counter);
+    // What happens when the time is up?//
     if (game.counter === 0) {
       console.log("TIME UP");
+      // run the timeUp();//
       game.timeUp();
     }
   },
 
-  // Function to render questions in the buttons //
-  renderQuestion: () => {
+  loadQuestion: () => {
+    // Reset the timer to 30 sec for every question //
     timer = setInterval(game.countdown, 1000);
-    let currentQuestion = questionsArr[this.currentQuestion].question;
-    for (let i = 0; i < questionsArr[this.currentQuestion].length; i++) {
-      console.log(currentQuestion);
-      $(question).text(currentQuestion.question);
-      $(questionImg).text(currentQuestion.src);
-      $(choice1).text(currentQuestion.choice1);
-      $(choice2).text(currentQuestion.choice2);
-      $(choice3).text(currentQuestion.choice3);
-      $(choice4).text(currentQuestion.choice4);
-      console.log(questionsArr[i].question);
-      console.log(questionsArr[i].src);
-      console.log(questionsArr[i].choice1);
-      console.log(questionsArr[i].choice2);
-      console.log(questionsArr[i].choice3);
-      console.log(questionsArr[i].correct);
-    }
+    question.text(questionsArr[game.questionIndex].question);
+    choice1.text(questionsArr[game.questionIndex].choice1);
+    choice2.text(questionsArr[game.questionIndex].choice2);
+    choice3.text(questionsArr[game.questionIndex].choice3);
+    choice4.text(questionsArr[game.questionIndex].choice4);
+
   },
+      
   nextQuestion: () => {
     game.counter = countStartNumber;
-    $(counter).text(game.counter);
-    game.currentQuestion++;
-    game.renderQuestion();
-  },
-
-  timeUp: () => {
-    clearInterval(timer);
-    $(counter).text(game.counter);
-    $(question).text("Out of Time!");
-    $(question).append(
-      "<h3>The Correct Answer was: " + questions[this.currentQuestion].correct
-    );
-    $(questionImg).append(
-      "<img src='" + questions[this.currentQuestion].src + "' />"
-    );
-
-    if (game.currentQuestion === questions.length - 1) {
-      setTimeout(game.results, 3 * 1000);
-    } else {
-      setTimeout(game.nextQuestion, 3 * 1000);
-    }
-  },
-
-  results: () => {
-    clearInterval(timer);
-
-    score.text("Triva Game Results");
     counter.text(game.counter);
-    question.text(
-      "The correct answer was :" + questionsArr[this.currentQuestion].correct
-    );
-    question.append(
-      "<img src'" + questionsArr[this.currentQuestion].image + "' />"
-    );
+    game.questionIndex++;
+    game.loadQuestion();
   },
 
-  clicked: e => {
-    clearInterval(timer);
+
+
+    timeUp: () => {
+      clearInterval(timer);
+      counter.text(game.counter);
+      question.text("The Correct Answer Was : " + questionsArr[game.questionIndex].correct);
+      choices.prepend("<img src='" + questionsArr[game.questionIndex].src + "' />");
+      counter.prepend("Out of Time");
+    }
   }
-}; //! Closing Brace for Game() //
+      
+    
 
-// End game when the for loop gets to the last question arr //
-let questionIndex = questionsArr.length - 1;
-// Create question iterator //
-let runningQuestionIndex;
 
-// function progressBar() {
-//   for (let i = 0; i <= lastQuestionIndex; i++){
-//     $("#progress")
-//     .append("<div>")
-//     .addClass("progress")
-//     .attr("id='questionIndex'")
-// }
 
-// for (let i = 0; i < questions.length; i++){
-//   console.log(questions[i].question);
-//   console.log(questions[i].src);
-//   console.log(questions[i].choice1);
-//   console.log(questions[i].choice2);
-//   console.log(questions[i].choice3);
-//   console.log(questions[i].correct);
-// }
-
-// $("#reset").hide();
-// $("#start").on("click", () => {
-//   $("#gameArea").show();
-// });
-
-// $(document).ready(function() {
-
-//   var question1 = questionsArr[0];
-
-//   console.log(optionsArr[0][0]); //Prints Forest Gump
-
-//   console.log(answerArr[0]);
-
-//   // default variables //
-//   var correct = 0;
-//   var incorrect = 0;
-//   var unanswered = 0;
-//   var questionCount = 0;
-
-//   // jQuery Variables //
-
-//   var count;
-
-//   $(".option").on("click", function() {
-//     event.preventDefault();
-//   });
-
-//   // APPEND questionArr to option buttons
-//   for (i = 0; i < questionsArr.length; i++) {
-//     //console.log(questionsArr[i]);
-//     var count = 0;
-//     $("#question").text(questionsArr[i]);
-//     count++;
-//   }
-
-//   for (z = 0; z < optionsArr.length; z++) {
-//     var choices = optionsArr[z];
-//     for (x = 0; x < choices.length; x++) {
-//       var btnValue = choices[x];
-//       $("#option1").text(choices[0]);
-//       $("#option2").text(choices[1]);
-//       $("#option3").text(choices[2]);
-//       $("#option4").text(choices[3]);
-//     }
-//   }
-//   $(".options").on("click", function(event) {
-//     event.preventDefault();
-//     console.log(
-//       $(this)
-//         .val()
-//         .trim()
-//     );
-
-// if ((e = answerArr[0])) {
-//   choices++;
-// }
-//   });
-
-//   // console.log(triviaObj);
-//   // console.log(triviaObj.questions[1]);
-//   // console.log(triviaObj.choices[1]);
-//   // console.log(triviaObj.answers[1]);
-// }); //!End of Document.ready Function //
-
-// function checkIfTrue() {
-//     var correctCounter = 0;
-//     var q1check = document.getElementById('q1a1');
-//     console.log(q1check);
-//     if (q1check.checked == '1') {
-//         console.log("Answer 1: true");
-//         correctCounter++;
-//     } else {
-//         console.log('Answer 1: false');
-//     }
-
-//     var q2check = document.getElementById('q2a2');
-//     console.log(q2check);
-//     if (q2check.checked == '1') {
-//         console.log("Answer 2: true");
-//         correctCounter++;
-//     } else {
-//         console.log('Answer 2: false');
-//     }
-
-//     var results = document.getElementById('results');
-//     results.innerText = "You scored: " + correctCounter + "/2";
-//}
