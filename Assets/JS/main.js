@@ -243,8 +243,8 @@ let game = {
     timeUp: () => {
       clearInterval(timer);
       counter.text(game.counter);
-      score.html("<h3>The Correct Answer Was : " + questionsArr[game.questionIndex].correct + "</h3>");
-      score.append("<img height='300' width='500' src='" + questionsArr[game.questionIndex].src + "' />");
+      question.html("<h3>The Correct Answer Was : " + questionsArr[game.questionIndex].correct + "</h3>");
+      questionImg.append("<img height='300' width='500' src='" + questionsArr[game.questionIndex].src + "' />");
       counter.text("Out of Time");
 
       if (game.questionIndex === questionsArr.length -1) {
@@ -267,7 +267,33 @@ let game = {
       // Appending the reset button to the bottom of the score div so the user can try again//
       score.append(reset);
 
-    }
+    },
+    // I got this from one of the solution files.  It saved me a ton of time//
+    clicked: (e) => {
+      if($(e.target).attr("data-name") === questionsArr[game.questionIndex].correct) {
+        this.answerCorrect();
+      }else {
+        this.answeredWrong();
+      }
+    },
+
+    answeredWrong: () => {
+      game.incorrect++;
+      clearInterval(timer);
+      // Untested Code //
+      question.text("Nope!");
+      question.html("<h3>The Correct Answer Was : " + questionsArr[game.questionIndex].correct + "</h3>");
+      questionImg.append("<img height='300' width='500' src='" + questionsArr[game.questionIndex].src + "' />");
+      // If there are no more questions in the arr Show Results in 3 seconds
+      if(game.questionIndex === questionsArr.length -1) {
+        setTimeout(game.results, 3 * 1000);
+        // If we have less than QuestionArr.length = show the next question in 3 seconds
+      }else {
+        setTimeout(game.nextQuestion, 3 * 1000);
+      }
+    },
+
+    //What happens if the user pics the correct answer //
 
   }
       
